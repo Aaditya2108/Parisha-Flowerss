@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: purple;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: peachpuff;
+    margin-bottom: 20px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+}
+
+.garden {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    animation: sway 3s infinite;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 150px;
+    background-color: green;
+    transform: translateX(-50%);
+    animation: grow 2s infinite;
+}
+
+.petal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0;
+    animation: bloom 3s infinite;
+}
+
+.petal1 { top: 10px; left: 50%; transform: translate(-50%, -50%); }
+.petal2 { top: 30px; left: 30px; transform: translate(-50%, -50%); }
+.petal3 { top: 30px; right: 30px; transform: translate(50%, -50%); }
+.petal4 { top: 50px; left: 50px; transform: translate(-50%, -50%); }
+.petal5 { top: 50px; right: 50px; transform: translate(50%, -50%); }
+
+.center {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: bloom 3s infinite;
+}
+
+.flower1 .petal { background-color: #ff69b4; }
+.flower2 .petal { background-color: #ff6347; }
+.flower3 .petal { background-color: #ffd700; }
+
+@keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes grow {
+    0% { height: 0; }
+    100% { height: 150px; }
+}
+
+@keyframes bloom {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+img{
+    height: 150px;
+    width: 150px;
+    
+}
+p{ 
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing:auto;
+  font-weight:weight;
+  font-style:normal;
+
+}
